@@ -7,6 +7,10 @@ const reduxCounter = (state = { count: 0 }, action) => {
     return { count: state.count - 1 }
   }
 
+  if (action.type === 'INCREASE_10') {
+    return { count: state.count + action.amount }
+  }
+
   return state;
 }
 
