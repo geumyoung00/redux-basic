@@ -1,5 +1,3 @@
-import { createStore } from 'redux';
-
 const reduxCounter = (state = { count: 0 }, action) => {
   if (action.type === 'INCREASE') {
     return { count: state.count + 1 }
@@ -12,6 +10,4 @@ const reduxCounter = (state = { count: 0 }, action) => {
   return state;
 }
 
-const store = createStore(reduxCounter);
-
-export default store;
+export default reduxCounter;
