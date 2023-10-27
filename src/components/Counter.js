@@ -6,15 +6,15 @@ const Counter = () => {
   const isHidden = useSelector((state) => state.isHidden);
   const dispatch = useDispatch();
 
-  const increaseHandler = (e) => {
+  const increaseHandler = () => {
     dispatch({ type: 'INCREASE' })
   };
 
-  const increaseTenHandler = (e) => {
+  const increaseTenHandler = () => {
     dispatch({ type: 'INCREASE_10', amount: 10 })
   };
 
-  const decreaseHandler = (e) => {
+  const decreaseHandler = () => {
     dispatch({ type: 'DECREASE' })
   };
 
