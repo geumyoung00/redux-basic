@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 // const counterReducer = (state = { count: 0, isHidden: false }, action) => {
 //   if (action.type === 'HIDDEN') {
@@ -29,12 +29,17 @@ createSlice({
       state.count--
     },
     increaseBy10(state, action) {
-      return state.count + action.amount;
+      return state.count + action.payload;
     },
     toggle(state) {
       return !state.isHidden;
     },
   }
 });
+// const store = configureStore(counterReducer);
+const counterSlice = createSlice();
+const store = configureStore({ reducer: counterSlice.reducer });
 
-export default createSlice;
+export const counterActions = counterSlice.actions;
+
+export default store;
