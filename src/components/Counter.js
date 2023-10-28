@@ -21,7 +21,7 @@ const Counter = () => {
   };
 
   const toggleCounterHandler = () => {
-    dispatch(counterActions.toggle)
+    dispatch(counterActions.toggle())
   };
 
   return (
