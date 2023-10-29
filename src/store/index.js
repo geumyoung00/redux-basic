@@ -31,10 +31,10 @@ const counterSlice = createSlice({
       state.count--
     },
     increaseBy10(state, action) {
-      return { count: state.count + action.payload };
+      state.count = state.count + action.payload
     },
     toggle(state) {
-      return { ...state, isHidden: !state.isHidden };
+      state.isHidden = !state.isHidden;
     },
   }
 });
